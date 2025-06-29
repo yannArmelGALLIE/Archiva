@@ -1,132 +1,127 @@
 @use "../components" as *;
 
 .login-main {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #bcbcbc;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #bcbcbc;
 }
 
 .login-container {
-    width: 80%;
-    display: flex;
-    margin: auto;
-    height: 600px;
-    text-align: center;
-    border-radius: 10px;
-            background: $blanc-gris;
-box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5),
-            -8px -8px 20px rgba(0, 0, 0, 0.3);
-
-
+  width: 80%;
+  display: flex;
+  margin: auto;
+  height: 600px;
+  text-align: center;
+  border-radius: 10px;
+  background: $blanc-gris;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5), -8px -8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .login-anim {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    & div {
-            height: 95%;
-                background: $succes;
-                margin-left: 10px;
-                border-radius: 10px;
-
-    }
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & div {
+    height: 95%;
+    background: $couleur-secondaire;
+    margin-left: 10px;
+    border-radius: 10px;
+  }
 }
 
 .login-container-form {
-    width: 50%;
-    display: flex;
-    margin-top: 20px;
-    flex-direction: column;
-    & h1 {
-        padding: 10px;
-        & span {
-            color: $succes;
-            padding: 10px;
-        };
-
-    };
-    & h2 {
-        margin-bottom: 15px;
+  width: 50%;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  & h1 {
+    padding: 10px;
+    & span {
+      color: $couleur-principale;
+      padding: 10px;
     }
+  }
+  & h2 {
+    margin-bottom: 15px;
+  }
 }
 
 .login-form {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  & label {
+    align-self: flex-start;
+    padding-left: 10px;
+  }
+  & input {
+    margin-left: 10px;
+    padding: 10px;
+    width: 90%;
     font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    & label {
-        align-self: flex-start;
-        padding-left: 10px
-    };
-    & input {
-        margin-left: 10px;
-        padding: 10px;
-        width: 90%;
-        font-size: 1.5rem;
-        &:focus {
-            border: 3px solid $succes;
-            outline: none
-        }
-    };
-    & button {
-        padding: 0.5rem 1.2rem;
-        margin-bottom: 10px;
-        width: 40%;
-        align-self: center;
-        font-size: 1.3rem;
-        color: #ffffff;
-        border-radius: 5px;
-        border: 2px solid #000;
-        background: #000;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        &:hover {
-            background: #222;
-            transform: scale(1.02);
-        }
-    };
-    & a {
-        color: $text-color;
-        font-size: 1.2rem;
-        text-decoration: none;
-        text-align: center;
-        margin-top: 5px;
-        transition: all 0.3s ease;
-        &:hover {
-            color: $succes;
-        }
+    &:focus {
+      border: 3px solid $couleur-principale;
+      outline: none;
     }
+  }
+  & button {
+    padding: 0.5rem 1.2rem;
+    margin-bottom: 10px;
+    width: 40%;
+    align-self: center;
+    font-size: 1.3rem;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 2px solid #000;
+    background: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      background: #222;
+      transform: scale(1.09);
+    }
+  }
+  & a {
+    color: $text-color;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $couleur-principale;
+    }
+  }
 }
 
 .error {
-    color:  $erreur;
-    font-weight: bold;
+  color: $erreur;
+  font-weight: bold;
 }
 
 .warning {
-    color: $avertissement;
-    font-weight: bold;
+  color: $avertissement;
+  font-weight: bold;
 }
 
 .separer {
-    margin: 15px 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    & div {
-        width: 45%;
-        background: grey;
-        height: 2px;
-    };
-    & p {
-        font-size: 1rem;
-    }
+  margin: 15px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  & div {
+    width: 45%;
+    background: grey;
+    height: 2px;
+  }
+  & p {
+    font-size: 1rem;
+  }
 }
