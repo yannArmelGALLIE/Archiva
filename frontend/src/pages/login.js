@@ -20,7 +20,7 @@ const Login = () => {
         if (warning !== "") {
           setWarning("");
           setError("Identifiants inconnus");
-        } else {
+        } else if (error !== "") {
           setError("Identifiants inconnus");
         }
       }
@@ -57,8 +57,8 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <br />
-            {error && <p class="error">{error}</p>}
-            {warning && <p class="warning">{warning}</p>}
+            {error && <div class="error"><span className="material-icons">cancel</span>{error}</div>}
+            {warning && <div class="warning"><span className="material-icons">warning</span>{warning}</div>}
             <br />
             <button type="submit">Se connecter</button>
             <div class="separer">

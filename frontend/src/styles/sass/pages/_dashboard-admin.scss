@@ -3,6 +3,7 @@
 .dashboard-admin {
   width: 100%;
   display: flex;
+  justify-content: space-between;
 }
 
 .dashboard-bar {
@@ -104,4 +105,69 @@ a.active-link {
   & span {
     color: $bleu-profond;
   }
+}
+
+.dashboard-main {
+  width: 80%;
+  margin: 10px;
+}
+
+.navbar {
+  background: $blanc-gris;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
+    -2px -2px 6px rgba(255, 255, 255, 0.6);
+  & div {
+    display: flex;
+    align-items: center;
+    &:first-of-type {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $text-color;
+    }
+  }
+  > div:nth-child(2) {
+    position: relative;
+    width: 29%;
+    & span {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: $text-clair;
+    }
+    & input {
+      width: 100%;
+      padding: 15px 12px 15px 40px;
+      border-radius: 15px;
+      border: 2px solid $text-clair;
+      font-size: 1rem;
+      background-color: rgba(255, 255, 255, 1);
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  > div:nth-child(3) {
+    width: 10%;
+    display: flex;
+    gap: 1rem;
+    & div {
+    background: $text-clair;
+    padding: 10px;
+    border-radius: 50px;
+    .material-icons {
+      color: $blanc-gris; 
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+  }
+}
 }

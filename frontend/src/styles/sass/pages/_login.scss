@@ -101,13 +101,11 @@
 }
 
 .error {
-  color: $erreur;
-  font-weight: bold;
+  @include alertStyle($erreur, 50%);
 }
 
 .warning {
-  color: $avertissement;
-  font-weight: bold;
+  @include alertStyle($avertissement, 65%);
 }
 
 .separer {
