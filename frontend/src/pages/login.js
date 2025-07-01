@@ -13,7 +13,7 @@ const Login = () => {
 
     if (email !== "" && password !== "") {
       if (email === "admin@gmail.com" && password === "123456") {
-        window.location = "/dashboard-admin";
+        window.location = "/dashboard-admin/dashboard";
         setWarning("");
         setError("");
       } else {

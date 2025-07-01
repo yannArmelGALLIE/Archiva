@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const renderMenuItems = (title, items, activePage, setActivePage) => {
   return (
     <div>
@@ -11,17 +13,16 @@ const renderMenuItems = (title, items, activePage, setActivePage) => {
                 : "menu-indicator"
             }
           ></div>
-          <a
-            href="#"
+          <Link
+            to={`/dashboard-admin/${item.id}`}
             onClick={(e) => {
-              e.preventDefault();
               setActivePage(item.id);
             }}
             className={activePage === item.id ? "active-link" : ""}
           >
             <span className="material-icons">{item.icon}</span>
             {item.label}
-          </a>
+          </Link>
         </div>
       ))}
     </div>

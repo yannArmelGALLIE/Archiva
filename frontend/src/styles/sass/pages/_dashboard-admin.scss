@@ -160,14 +160,77 @@ a.active-link {
     display: flex;
     gap: 1rem;
     & div {
-    background: $text-clair;
-    padding: 10px;
-    border-radius: 50px;
-    .material-icons {
-      color: $blanc-gris; 
-      font-size: 1.6rem;
-      cursor: pointer;
+      background: $bleu-profond;
+      padding: 10px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      .material-icons {
+        color: $blanc-gris;
+        font-size: 1.6rem;
+        cursor: pointer;
+      }
+      &:hover {
+        background: $blanc-gris;
+        border: 1px solid $bleu-profond;
+        transform: scale(1.09);
+        .material-icons {
+          color: $bleu-profond;
+        }
+      }
     }
   }
 }
+
+.main-content {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.card-content {
+  background: $blanc-gris;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
+    -2px -2px 6px rgba(255, 255, 255, 0.6);
+  > div {
+    border: 2px solid $text-clair;
+    width: 24%;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: $bleu-profond;
+      transform: scale(1.09);
+      border: none;
+      > a div:first-of-type > p, a div:nth-child(2) {
+        color: $blanc-gris;
+      }
+    }
+    > a {
+      text-decoration: none;
+    }
+    > a div:first-of-type {
+      position: relative;
+      display: flex;
+      padding-top: 10px;
+      align-items: start;
+      justify-content: space-between;
+      width: 100%;
+      > p {
+        font-size: 1rem;
+        color: $text-clair;
+      }
+    }
+    > a div:nth-child(2) {
+      font-size: 2.5rem;
+      color: $bleu-profond;
+    }
+  }
 }
