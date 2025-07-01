@@ -35,7 +35,7 @@ High Availability: Ensure service continuity between the various interconnected 
 | CSS3      | ![CSS3](https://img.shields.io/badge/css3-264DE4.svg?style=for-the-badge&logo=css&logoColor=white)
 | SASS     | ![SASS](https://img.shields.io/badge/sass-CC6699.svg?style=for-the-badge&logo=sass&logoColor=white)
 | JavaScript       | ![JavaScript](https://img.shields.io/badge/javascript-F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
-| React.JS       | ![React](https://img.shields.io/badge/react.js-61DAFB.svg?style=for-the-badge&logo=react&logoColor=black) |
+| React       | ![React](https://img.shields.io/badge/react-61DAFB.svg?style=for-the-badge&logo=react&logoColor=black) |
 | Node.JS      |  ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) |
 | Express      |  ![Express](https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white) |
 | MongoDB      |   ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) |

@@ -25,7 +25,6 @@ const Index = () => {
           <Route path="param-ia" element={<ParamIa />} />
           <Route path="securite" element={<Security />} />
           <Route path="synchronisation" element={<Sync />} />
-          
         </Route>
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
