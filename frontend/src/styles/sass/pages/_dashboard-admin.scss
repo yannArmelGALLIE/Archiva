@@ -348,7 +348,7 @@ a.active-link {
   background: $blanc-gris;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
   max-height: 450px;
   border-radius: 10px;
@@ -394,6 +394,49 @@ a.active-link {
         padding: 5px 10px;
         background: darken($color: $blanc-gris, $amount: 35%);
         transition: all 0.2s ease;
+      }
+    }
+  }
+  & > div:nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    & > div:nth-child(1) {
+      width: 40%;
+    }
+    & > div:nth-child(2) {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      & button {
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        &:first-of-type {
+          border: 2px solid $bleu-profond;
+          color: $text-color;
+          background: $blanc-gris;
+          transition: all 0.3s ease-in;
+          &:hover {
+            background: $bleu-profond;
+            color: $blanc-gris;
+          }
+        }
+        &:nth-of-type(2) {
+          border: 2px solid $bleu-profond;
+          background: $bleu-profond;
+          color: $blanc-gris;
+          transition: all 0.3s ease-in;
+          &:hover {
+            background: $blanc-gris;
+            color: $text-color;
+          }
+        }
       }
     }
   }
