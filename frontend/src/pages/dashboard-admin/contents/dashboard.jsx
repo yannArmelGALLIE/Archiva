@@ -4,6 +4,7 @@ import BarGraph from "../../widgets/bar-graph";
 import LineGraph from "../../widgets/line-graph";
 import PieGraph from "../../widgets/pie-graph";
 import graphRGBColors from "../../../styles/utils/graph-rgb-colors";
+import profil from "../../../styles/img/profil.jpg";
 import { Chart as ChartJS } from "chart.js/auto";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
 import { Link } from "react-router-dom";
@@ -51,6 +52,22 @@ const pieChartData = [
   { type: "Autres", valeur: 1089, pourcentage: 5 },
 ];
 
+const users = [
+  { id: 1, name: "GALLIE", role: "Administrateur", img: profil },
+  { id: 2, name: "FATOU", role: "Agent", img: profil },
+  { id: 3, name: "ISSA", role: "Agent", img: profil },
+  { id: 4, name: "AICHA", role: "Agent", img: profil },
+  { id: 6, name: "BAKI", role: "Administrateur", img: profil },
+  { id: 7, name: "DADIE", role: "Administrateur", img: profil },
+  { id: 8, name: "KDM", role: "Administrateur", img: profil },
+];
+
+const currentUser = users[0];
+
+const sameRoleUsers = users.filter(
+  (user) => user.role === currentUser.role && user.id !== currentUser.id
+);
+
 const Dashboard = () => {
   const cardInfo = [
     {
@@ -87,7 +104,38 @@ const Dashboard = () => {
                 colors={graphRGBColors.slice(0, 5)}
               />
             </div>
-            <div className="collaborators-content"></div>
+            <div className="collaborators-content">
+              <div>Collaborateurs</div>
+              {sameRoleUsers.length === 0 ? (
+                <div>
+                  Aucun autre utilisateur avec ce rôle ({currentUser.role}).
+                </div>
+              ) : (
+                <div>
+                  {sameRoleUsers.map((user) => (
+                    <div>
+                      <img src={user.img} alt="Photo de profil" />
+                      <div>
+                        <p>{user.name}</p>
+                        <p>{user.role}</p>
+                        <div>
+                          <Link to={`/dashboard-admin/utilisateur`}>
+                            Message
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                  <Link
+                    to={`/dashboard-admin/utilisateur?role=${currentUser.role}`}
+                  >
+                    Voir tous les {currentUser.role.toLowerCase()}s
+                  </Link>
+                  {/* const queryParams = new URLSearchParams(useLocation().search);
+const roleFilter = queryParams.get("role"); */}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
