@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, Outlet } from "react-router-dom";
+import { useLocation, Outlet, Link } from "react-router-dom";
 import renderMenuItems from "../widgets/render-menu-items";
 import profil from "../../styles/img/profil.jpg";
 
@@ -8,7 +8,7 @@ const DashboardAdmin = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const path = location.pathname.split("/")[2]; 
+    const path = location.pathname.split("/")[2];
     if (path) setActivePage(path);
   }, [location]);
 
@@ -28,23 +28,27 @@ const DashboardAdmin = () => {
           <h1>Archiva</h1>
         </div>
         <div className="dashboard-menu">
-          {renderMenuItems("Principale", menuItems.slice(0, 3), activePage, setActivePage)}
-          {renderMenuItems("Configuration", menuItems.slice(3), activePage, setActivePage)}
+          {renderMenuItems(
+            "Principale",
+            menuItems.slice(0, 3),
+            activePage,
+            setActivePage
+          )}
+          {renderMenuItems(
+            "Configuration",
+            menuItems.slice(3),
+            activePage,
+            setActivePage
+          )}
         </div>
         <div className="dashboard-profil">
           <img src={profil} alt="Photo de profil" />
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setActivePage("profil");
-            }}
-          >
+          <Link>
             <div>
               <p>GALLIE Yann-Armel</p>
               <p>Administrateur</p>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
 
